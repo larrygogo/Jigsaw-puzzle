@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
+# Merge Image
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个基于 React + TypeScript + Vite 的图片合并工具。
 
-Currently, two official plugins are available:
+## 项目简介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+这是一个简单而强大的在线图片合并工具，允许用户上传多张图片并将它们合并成一张图片。该工具完全在浏览器端运行，保护用户隐私的同时提供便捷的图片处理体验。
 
-## Expanding the ESLint configuration
+## 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite 6
+- ESLint
+- 现代化的开发工具链
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 功能特点
+
+- 支持多图片上传
+- 浏览器端图片处理
+- 实时预览
+- 简洁直观的用户界面
+- 支持自定义合并参数
+
+## 开始使用
+
+### 环境要求
+
+- Node.js 18.0.0 或更高版本
+- npm 或 yarn 包管理器
+
+### 安装步骤
+
+1. 克隆项目到本地：
+
+```bash
+git clone [项目地址]
+cd merge-image
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. 安装依赖：
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# 或
+yarn install
 ```
+
+3. 启动开发服务器：
+
+```bash
+npm run dev
+# 或
+yarn dev
+```
+
+4. 打开浏览器访问 http://localhost:5173
+
+### 构建生产版本
+
+```bash
+npm run build
+# 或
+yarn build
+```
+
+构建后的文件将生成在 `dist` 目录中。
+
+## 使用说明
+
+1. 点击上传按钮或将图片拖拽到指定区域
+2. 选择需要合并的图片
+3. 调整合并参数（如需要）
+4. 点击合并按钮
+5. 下载最终生成的图片
+
+## 开发相关
+
+### 可用的命令
+
+- `npm run dev` - 启动开发服务器
+- `npm run build` - 构建生产版本
+- `npm run lint` - 运行代码检查
+- `npm run preview` - 预览生产构建
+
+## 贡献指南
+
+欢迎提交 Issue 和 Pull Request 来帮助改进这个项目。
+
+## 许可证
+
+MIT License
